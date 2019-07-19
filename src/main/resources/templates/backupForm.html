@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="#"
+      th:action="@{/process}"
+      th:object="${pet}"
+      method="post">
+
+    <div class="col-25">
+        <label for="petname">Pet's Name:  </label>
+    </div>
+    <div class="col-75">
+        <input type="text" id="petname" name="petname" placeholder="Your pet's name..">
+    </div>
+    <br />
+
+    <div class="row">
+        <div class="col-25">
+            <label for="color">Pet's Color:  </label>
+        </div>
+        <div class="col-75">
+            <input type="text" id="color" name="color" placeholder="Your pet's complexion...">
+        </div>
+    </div>
+    <br />
+
+    <div class="row">
+        <div class="col-25">
+            <label for="dateLost">Date Lost:  </label>
+        </div>
+        <div class="col-25">
+            <input type="number" id="dateLost" name="dateLost" placeholder="xx-xx-xxxx">
+        </div>
+    </div>
+    <br />
+
+    <div class="row">
+        <div class="col-33">
+            <label for="contactPhone">Phone Number:  </label>
+        </div>
+        <div class="col-66">
+            <input type="number" id="contactPhone" name="contactPhone" placeholder="Your phone number...">
+        </div>
+    </div>
+    <br />
+
+    <div class="row">
+        <div class="col-25">
+            <label for="description">Pet Description:  </label>
+        </div>
+        <div class="col-75">
+            <textarea id="description" name="description" placeholder="Describe your pet to us" style="height:200px"></textarea>
+        </div>
+    </div>
+    <br />
+
+
+    <div class="row">
+        <input type="submit" value="Submit">
+    </div>
+
+</body>
+</html>

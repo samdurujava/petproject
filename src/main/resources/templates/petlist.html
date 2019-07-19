@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pets List</title>
+</head>
+<body>
+<a href="/add">Add a pet</a><br />
+
+<div th:each="pet : ${pets}">
+    <h4 th:inline="text">[[${pet.petname}]] ,a [[${pet.color}]] dog/cat went missing on [[${pet.dateLost}]] . You can contact [[${pet.contactPhone}]] if you have any details about its whereabouts. </h4>
+    <p th:text="${pet.description}"></p>
+
+    <td>
+        <a th:href="@{/update/{id}(id=${pet.id})}">Update</a> -
+        <a th:href="@{/delete/{id}(id=${pet.id})}">Delete</a>
+    </td>
+</div>
+</body>
+</html>
